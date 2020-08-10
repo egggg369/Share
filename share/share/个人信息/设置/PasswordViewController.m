@@ -56,6 +56,10 @@
     
     [self createUI];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillAppear:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisAppear:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
 
 - (void) createUI
@@ -182,7 +186,15 @@
     return YES;
 }
 
+- (void)keyboardWillDisAppear:(NSNotification *)notification{
+    [UIView animateWithDuration:1 animations:^{self.view.transform = CGAffineTransformMakeTranslation(0, 0);}];
+}
 
+- (void)keyboardWillAppear:(NSNotification *)notification{
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat keyboardY = keyboardFrame.origin.y;
+    [UIView animateWithDuration:1.0 animations:^{self.view.transform = CGAffineTransformMakeTranslation(0, keyboardY  + 173 - self.view.frame.size.height);}];
+}
 
 /*
 #pragma mark - Navigation

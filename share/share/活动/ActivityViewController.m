@@ -33,7 +33,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:0.92f green:0.93f blue:1.00f alpha:1.00f];
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 416, 800)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 416, self.view.frame.size.height - 180)];
     [self.tableView registerClass:[ActivityTableViewCell class] forCellReuseIdentifier:@"activity"];
     [self.tableView registerClass:[ActivityTableViewCell class] forCellReuseIdentifier:@"activity01"];
     [self.tableView registerClass:[ActivityTableViewCell class] forCellReuseIdentifier:@"activity02"];

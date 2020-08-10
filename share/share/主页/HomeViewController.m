@@ -39,37 +39,18 @@
         self.view.backgroundColor = [UIColor colorWithRed:0.92f green:0.93f blue:1.00f alpha:1.00f];
 
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, 416, 580)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 416, 710)];
     
     
-    [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"home"];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
+    
+    
+    
+//            _sv = [[UIScrollView alloc]init];
+//            _sv.frame = CGRectMake(0, 0, 416, 150);
+    
+    _sv = [[UIScrollView alloc] initWithFrame:headerView.frame];
 
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-
-    [self.view addSubview:_tableView];
-    
-    
-            _sv = [[UIScrollView alloc]init];
-            _sv.frame = CGRectMake(0, 0, 416, 150);
-//            _sv.pagingEnabled = YES;
-//            _sv.scrollEnabled = YES;
-//            _sv.contentSize = CGSizeMake(416*4, 150);
-//            _sv.bounces = YES;
-//            _sv.alwaysBounceHorizontal = YES;
-//            _sv.alwaysBounceVertical = YES;
-//            _sv.showsHorizontalScrollIndicator = NO;
-//            _sv.showsVerticalScrollIndicator = YES;
-//            _sv.backgroundColor = [UIColor whiteColor];
-    
-//            for(int i = 0; i < 4; i++) {
-//                NSString* strName = [NSString stringWithFormat:@"1-0-%d.png",i+1];
-//                UIImage* image = [UIImage imageNamed:strName];
-//                UIImageView* iView = [[UIImageView alloc]initWithImage:image];
-//                iView.frame = CGRectMake(416*i, 0, 416, 150);
-//                [_sv addSubview:iView];
-//            }
-    
             [self.view addSubview:_sv];
     
     for(int i = 0; i < COUNT + 2; i++) {
@@ -89,11 +70,25 @@
         [_sv addSubview:imageView];
     }
     
+    
+    
     _sv.contentSize = CGSizeMake((COUNT + 2) * 416, 150);
     
     _sv.pagingEnabled = YES;
     
+    [headerView addSubview:_sv];
     
+    
+    
+    _tableView.tableHeaderView = headerView;
+    
+    [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"home"];
+    // [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"home2"];
+
+     self.tableView.delegate = self;
+     self.tableView.dataSource = self;
+
+     [self.view addSubview:_tableView];
     
     _pc = [[UIPageControl alloc] initWithFrame:CGRectMake(50, 115, 300, 30)];
     _pc.backgroundColor = [UIColor clearColor];
@@ -105,11 +100,12 @@
     _pc.currentPageIndicatorTintColor = [UIColor whiteColor];
     //其他小圆点的颜色
     //pc.pageIndicatorTintColor = [UIColor purpleColor];
-    
+
     [_pc addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
-    
-    [self.view addSubview:_pc];
-    
+
+    //[self.view addSubview:_pc];
+    [headerView addSubview:_pc];
+
     [self createTimer];
     
     
@@ -154,17 +150,6 @@
 }
 
 
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-//{
-//    //定时器开始
-//    [_timer setFireDate:[NSDate distantFuture]];
-//}
-//
-//
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-//{
-//    [_timer setFireDate:[NSDate distantPast]];
-//}
 
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -240,7 +225,7 @@
     
     
             return cell;
-        
+    
 }
 
 

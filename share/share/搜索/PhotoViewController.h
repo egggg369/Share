@@ -11,8 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-//typedef void ^(ReturnTextBlock)(UIImage *imagee);
-//typedef void ^(ReturnTextBlock2)(NSNumber *num);
+typedef void (^textBlock)(UIImage *imagee);
+typedef void (^textBlock2)(NSNumber *num);
 @interface PhotoViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property UIImageView *imageView;
@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property int numm;
 @property BOOL select;
 
-@property (nonatomic, copy) ReturnTextBlock returnTextBlock;
-@property (nonatomic, copy) ReturnTextBlock2 returnTextBlock2;
+@property (nonatomic, copy) textBlock textBlock;
+@property (nonatomic, copy) textBlock2 textBlock2;
 
-- (void)returnText:(ReturnTextBlock)block;
-- (void)returnText2:(ReturnTextBlock2)block2;
+- (void)text:(textBlock)block;
+- (void)text2:(textBlock2)block2;
 
 
 @end

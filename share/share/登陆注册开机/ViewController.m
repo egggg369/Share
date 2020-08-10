@@ -168,10 +168,7 @@
 
 }
 
-//- (void)keyboardWillshow:(NSNotification *)aNotification
-//{
-//    if([self.field isFistResponder] == NO)
-//}
+
 
 - (void)keyboardWillDisAppear:(NSNotification *)notification{
     [UIView animateWithDuration:1 animations:^{self.view.transform = CGAffineTransformMakeTranslation(0, 0);}];
@@ -226,27 +223,7 @@
     UINavigationController * navActivity = [[UINavigationController alloc]initWithRootViewController:activityViewController];
     
         
-    //设置导航栏控制器背景
-//    navHome.navigationBar.barTintColor = [UIColor colorWithRed:0.12f green:0.54f blue:0.80f alpha:1.00f];
-//    homeViewController.title = @"SHARE";
-//    [navHome.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-//
-//    navSearch.navigationBar.barTintColor = [UIColor colorWithRed:0.12f green:0.54f blue:0.80f alpha:1.00f];
-//    searchViewController.title = @"搜索";
-//    [navSearch.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-//
-//    navArticle.navigationBar.barTintColor = [UIColor colorWithRed:0.12f green:0.54f blue:0.80f alpha:1.00f];
-//    articleViewController.title = @"文章";
-//    [navArticle.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-//
-//    navActivity.navigationBar.barTintColor = [UIColor colorWithRed:0.12f green:0.54f blue:0.80f alpha:1.00f];
-//    activityViewController.title = @"活动";
-//    [navActivity.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-//
-//    navMyself.navigationBar.barTintColor = [UIColor colorWithRed:0.12f green:0.54f blue:0.80f alpha:1.00f];
-//    myselfViewController.title = @"个人信息";
-//    [navMyself.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-//
+    
     
     UIWindow *window = self.view.window;
     [window makeKeyAndVisible];

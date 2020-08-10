@@ -134,8 +134,6 @@
 		184F71D024CEBF8E00481472 /* 7-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71C524CEBF8C00481472 /* 7-8.png */; };
 		184F71D124CEBF8E00481472 /* 7-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71C624CEBF8C00481472 /* 7-4.png */; };
 		184F71D224CEBF8E00481472 /* 7-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71C724CEBF8D00481472 /* 7-15.png */; };
-		184F71E824CEBFC000481472 /* 7-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71D924CEBFBE00481472 /* 7-6.png */; };
-		184F71F024CEBFC000481472 /* 7-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71E124CEBFC000481472 /* 7-3.png */; };
 		184F71F624CEC83E00481472 /* 7-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71F224CEC83D00481472 /* 7-11.png */; };
 		184F71F724CEC83E00481472 /* 7-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71F324CEC83D00481472 /* 7-10.png */; };
 		184F71F824CEC83E00481472 /* 7-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F71F424CEC83D00481472 /* 7-5.png */; };
@@ -155,9 +153,10 @@
 		184F723024CFA43900481472 /* 7-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F722424CFA43800481472 /* 7-27.png */; };
 		184F723124CFA43900481472 /* 7-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F722524CFA43800481472 /* 7-25.png */; };
 		184F723624CFA5BE00481472 /* 7-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723224CFA5BC00481472 /* 7-30.png */; };
-		184F723724CFA5BE00481472 /* 7-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723324CFA5BD00481472 /* 7-32.png */; };
-		184F723824CFA5BE00481472 /* 7-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723424CFA5BD00481472 /* 7-31.png */; };
 		184F723924CFA5BE00481472 /* 7-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723524CFA5BD00481472 /* 7-29.png */; };
+		184F723C24CFBEA700481472 /* 截屏2020-07-28 上午10.01.56.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723A24CFBEA600481472 /* 截屏2020-07-28 上午10.01.56.png */; };
+		184F723D24CFBEA700481472 /* 截屏2020-07-28 上午10.01.51.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F723B24CFBEA700481472 /* 截屏2020-07-28 上午10.01.51.png */; };
+		184F731824D553CF00481472 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F731724D553CF00481472 /* ChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,8 +346,6 @@
 		184F71C524CEBF8C00481472 /* 7-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-8.png"; sourceTree = "<group>"; };
 		184F71C624CEBF8C00481472 /* 7-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-4.png"; sourceTree = "<group>"; };
 		184F71C724CEBF8D00481472 /* 7-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-15.png"; sourceTree = "<group>"; };
-		184F71D924CEBFBE00481472 /* 7-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7-6.png"; path = "../7-6.png"; sourceTree = "<group>"; };
-		184F71E124CEBFC000481472 /* 7-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7-3.png"; path = "../7-3.png"; sourceTree = "<group>"; };
 		184F71F224CEC83D00481472 /* 7-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-11.png"; sourceTree = "<group>"; };
 		184F71F324CEC83D00481472 /* 7-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-10.png"; sourceTree = "<group>"; };
 		184F71F424CEC83D00481472 /* 7-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-5.png"; sourceTree = "<group>"; };
@@ -369,9 +366,11 @@
 		184F722424CFA43800481472 /* 7-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-27.png"; sourceTree = "<group>"; };
 		184F722524CFA43800481472 /* 7-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-25.png"; sourceTree = "<group>"; };
 		184F723224CFA5BC00481472 /* 7-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-30.png"; sourceTree = "<group>"; };
-		184F723324CFA5BD00481472 /* 7-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-32.png"; sourceTree = "<group>"; };
-		184F723424CFA5BD00481472 /* 7-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-31.png"; sourceTree = "<group>"; };
 		184F723524CFA5BD00481472 /* 7-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-29.png"; sourceTree = "<group>"; };
+		184F723A24CFBEA600481472 /* 截屏2020-07-28 上午10.01.56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "截屏2020-07-28 上午10.01.56.png"; sourceTree = "<group>"; };
+		184F723B24CFBEA700481472 /* 截屏2020-07-28 上午10.01.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "截屏2020-07-28 上午10.01.51.png"; sourceTree = "<group>"; };
+		184F731624D553CE00481472 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		184F731724D553CF00481472 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,8 +401,8 @@
 		184F706324C68DFC00481472 = {
 			isa = PBXGroup;
 			children = (
-				184F723324CFA5BD00481472 /* 7-32.png */,
-				184F723424CFA5BD00481472 /* 7-31.png */,
+				184F723B24CFBEA700481472 /* 截屏2020-07-28 上午10.01.51.png */,
+				184F723A24CFBEA600481472 /* 截屏2020-07-28 上午10.01.56.png */,
 				184F723224CFA5BC00481472 /* 7-30.png */,
 				184F723524CFA5BD00481472 /* 7-29.png */,
 				184F722424CFA43800481472 /* 7-27.png */,
@@ -424,7 +423,6 @@
 				184F71F224CEC83D00481472 /* 7-11.png */,
 				184F71F524CEC83D00481472 /* 7-12.png */,
 				184F71C124CEBF8B00481472 /* 7-1.png */,
-				184F71E124CEBFC000481472 /* 7-3.png */,
 				184F71C624CEBF8C00481472 /* 7-4.png */,
 				184F71C324CEBF8C00481472 /* 7-7.png */,
 				184F71C524CEBF8C00481472 /* 7-8.png */,
@@ -433,7 +431,6 @@
 				184F71BE24CEBF8A00481472 /* 7-14.png */,
 				184F71C724CEBF8D00481472 /* 7-15.png */,
 				184F71BF24CEBF8B00481472 /* 7-2.png */,
-				184F71D924CEBFBE00481472 /* 7-6.png */,
 				184F71B024CE699200481472 /* 性别开.png */,
 				184F71B124CE699300481472 /* 性别关.png */,
 				184F719E24CD67CF00481472 /* 搜索上传坐标.png */,
@@ -677,6 +674,8 @@
 				184F717F24CC891A00481472 /* MessageTableViewCell.m */,
 				184F718424CC89C200481472 /* MessageViewController.h */,
 				184F718524CC89C200481472 /* MessageViewController.m */,
+				184F731624D553CE00481472 /* ChatViewController.h */,
+				184F731724D553CF00481472 /* ChatViewController.m */,
 			);
 			path = "我的信息";
 			sourceTree = "<group>";
@@ -855,10 +854,8 @@
 				184F723924CFA5BE00481472 /* 7-29.png in Resources */,
 				184F722624CFA43800481472 /* 7-26.png in Resources */,
 				184F722B24CFA43900481472 /* 7-21.png in Resources */,
-				184F71E824CEBFC000481472 /* 7-6.png in Resources */,
 				184F71CC24CEBF8E00481472 /* 7-1.png in Resources */,
 				184F722C24CFA43900481472 /* 7-23.png in Resources */,
-				184F71F024CEBFC000481472 /* 7-3.png in Resources */,
 				184F714D24CC2DD300481472 /* 5-1-3.jpg in Resources */,
 				184F70EA24C941DF00481472 /* 1-2.png in Resources */,
 				184F70D224C8788F00481472 /* activity.png in Resources */,
@@ -873,6 +870,7 @@
 				184F711B24CB5E4200481472 /* 3-1-1.png in Resources */,
 				184F71D024CEBF8E00481472 /* 7-8.png in Resources */,
 				184F714424CC26A600481472 /* 3-2-2.jpg in Resources */,
+				184F723C24CFBEA700481472 /* 截屏2020-07-28 上午10.01.56.png in Resources */,
 				184F722824CFA43900481472 /* 7-17.png in Resources */,
 				184F716A24CC761400481472 /* 关注.png in Resources */,
 				184F710F24CAF1C600481472 /* 眼睛.png in Resources */,
@@ -882,14 +880,12 @@
 				184F71D124CEBF8E00481472 /* 7-4.png in Resources */,
 				184F707C24C68E0200481472 /* Assets.xcassets in Resources */,
 				184F719724CC9E2E00481472 /* 开启.png in Resources */,
-				184F723824CFA5BE00481472 /* 7-31.png in Resources */,
 				184F71BB24CE7D4200481472 /* activity2.png in Resources */,
 				184F712124CBB93F00481472 /* 1-1.png in Resources */,
 				184F713424CC002500481472 /* 个人-心.png in Resources */,
 				184F712824CBC46100481472 /* 2-2-2.png in Resources */,
 				184F71BD24CE7D4200481472 /* myself2.png in Resources */,
 				184F70FC24C9CDE800481472 /* 分类.png in Resources */,
-				184F723724CFA5BE00481472 /* 7-32.png in Resources */,
 				184F71F724CEC83E00481472 /* 7-10.png in Resources */,
 				184F70F524C99F5F00481472 /* 1-0-3.png in Resources */,
 				184F712D24CBDBDC00481472 /* 假日2.png in Resources */,
@@ -901,6 +897,7 @@
 				184F719624CC9E2E00481472 /* 关闭.png in Resources */,
 				184F712724CBC46100481472 /* 2-2-1.png in Resources */,
 				184F714724CC26A600481472 /* 3-2-4.jpeg in Resources */,
+				184F723D24CFBEA700481472 /* 截屏2020-07-28 上午10.01.51.png in Resources */,
 				184F71D224CEBF8E00481472 /* 7-15.png in Resources */,
 				184F723624CFA5BE00481472 /* 7-30.png in Resources */,
 				184F70DA24C9081400481472 /* 4-1.png in Resources */,
@@ -975,6 +972,7 @@
 				184F713924CC05A800481472 /* MyselfTableViewCell.m in Sources */,
 				184F711424CB142100481472 /* ArticleTableViewCell.m in Sources */,
 				184F716324CC721C00481472 /* FollowViewController.m in Sources */,
+				184F731824D553CF00481472 /* ChatViewController.m in Sources */,
 				184F711724CB34DA00481472 /* HolidayViewController.m in Sources */,
 				184F719024CC956800481472 /* XiaoxiTableViewCell.m in Sources */,
 				184F70C124C8715400481472 /* HomeViewController.m in Sources */,

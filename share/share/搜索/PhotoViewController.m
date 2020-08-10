@@ -74,7 +74,7 @@
     _numm = 0;
     nameArr = [[NSMutableArray alloc]init];
     
-    for(int i = 0; i < 34; i++) {
+    for(int i = 0; i < 30; i++) {
         [nameArr addObject:[NSMutableString stringWithFormat:@"7-%d.png", i+1]];
     }
     
@@ -85,11 +85,10 @@
     
     self.navigationController.navigationBar.translucent = NO;
     
-    UIImage *image = [UIImage imageNamed:@"开启"];
-    selectImageView = [[UIImageView alloc] initWithImage:image];
-    selectImageView.frame = CGRectMake(70, 0, 25, 25);
+    
     
     _layOut = [[UICollectionViewFlowLayout alloc] init];
+    
     _myCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 111) collectionViewLayout:_layOut];
     [self.view addSubview:_myCollectionView];
     
@@ -104,6 +103,7 @@
     
     [_myCollectionView registerClass:[ShangCollectionViewCell class] forCellWithReuseIdentifier:@"111"];
     
+    _myCollectionView.allowsMultipleSelection = YES;
     
     
 }
@@ -144,26 +144,26 @@
 
 
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if(!_image){
-        _image = selectImageView.image;
-    }
-    NSLog(@"确定");
-    if(selectImageView.tag == 0) {
-        selectImageView.tag = 1;
-        NSLog(@"%ld", (long)selectImageView.tag);
-        _numm++;
-        UIImage *image = [UIImage imageNamed:@"开启.png"];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.frame = CGRectMake(70, 0, 25, 25);
-        [selectImageView addSubview:imageView];
-    } else {
-        selectImageView.tag = 0;
-        _numm--;
-        [selectImageView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    }
-}
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    if(!_image){
+//        _image = selectImageView.image;
+//    }
+//    NSLog(@"确定");
+//    if(selectImageView.tag == 0) {
+//        selectImageView.tag = 1;
+//        NSLog(@"%ld", (long)selectImageView.tag);
+//        _numm++;
+//        UIImage *image = [UIImage imageNamed:@"开启.png"];
+//        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//        imageView.frame = CGRectMake(70, 0, 25, 25);
+//        [selectImageView addSubview:imageView];
+//    } else {
+//        selectImageView.tag = 0;
+//        _numm--;
+//        [selectImageView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    }
+//}
 
 - (void)press:(UIButton *) btn{
 
@@ -171,10 +171,13 @@
         _image = btn.imageView.image;
     }
 
-    UIView * cellView = btn.superview.superview;
-    UICollectionView * collectionView = (UICollectionView *)cellView;
+//    UIView * cellView = btn.superview.superview;
+//    UICollectionView * collectionView = (UICollectionView *)cellView;
 
     if(btn.selected == NO){
+        UIImage *image = [UIImage imageNamed:@"开启"];
+        selectImageView = [[UIImageView alloc] initWithImage:image];
+        selectImageView.frame = CGRectMake(70, 0, 25, 25);
         btn.selected = YES;
         _numm++;
         [btn addSubview:selectImageView];
@@ -237,21 +240,21 @@
     
 }
 
-- (void)returnText:(ReturnTextBlock)block{
-    self.returnTextBlock = block;
+- (void)text:(textBlock)block{
+    self.textBlock = block;
 }
 
-- (void)returnText2:(ReturnTextBlock2)block2{
-    self.returnTextBlock2 = block2;
+- (void)text2:(textBlock2)block2{
+    self.textBlock2 = block2;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
-    if(self.returnTextBlock != nil){
-        self.returnTextBlock(self.image);
+    if(self.textBlock != nil){
+        self.textBlock(self.image);
     }
-    if(self.returnTextBlock2 != nil){
+    if(self.textBlock2 != nil){
         _num = @(_numm);
-        self.returnTextBlock2(self.num);
+        self.textBlock2(self.num);
     }
 }
 

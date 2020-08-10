@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import "MessageTableViewCell.h"
+#import "ChatViewController.h"
 @interface MessageViewController ()
 
 @end
@@ -71,7 +72,14 @@
     return 1;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0) {
+        ChatViewController *chatViewController = [[ChatViewController alloc]init];
+        [self.navigationController pushViewController:chatViewController animated:NO];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

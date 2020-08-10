@@ -28,7 +28,7 @@
     self.navigationController.navigationBar.translucent = NO;
     
     
-    _btn09 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _btn09 = [UIButton buttonWithType:UIButtonTypeCustom];
     _btn09.frame = CGRectMake(40, 20, 200, 140);
     _btn09.backgroundColor = [UIColor grayColor];
     [_btn09  setTitle:@"选择图片" forState:UIControlStateNormal];
@@ -254,20 +254,25 @@
 //    [window makeKeyAndVisible];
     PhotoViewController *photoViewController = [[PhotoViewController alloc] init];
     //window.rootViewController = photoViewController;
-//    [photoViewController returnText:^(UIImage *imagee){
-//
-//        [self->_btn09 setImage:imagee forState:UIControlStateNormal];
-//    }];
-//    [photoViewController returnText2:^(NSNumber *num){
-//        self -> _num = num;
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(210, 1, 15, 15)];
-//        label.backgroundColor = [UIColor redColor];
-//        label.textColor = [UIColor whiteColor];
-//        label.text = [NSString stringWithFormat:@"%@", self.num];
-//
-//
-//        [self->_btn09 addSubview:label];
-//    }];
+    
+    
+    
+    [photoViewController text:^(UIImage *imagee){
+
+        //[self->_btn09 setImage:imagee forState:UIControlStateNormal];
+        self->_btn09.frame = CGRectMake(47, 30, 135, 135);
+        [self->_btn09 setImage:[imagee imageWithRenderingMode:UIImageRenderingModeAutomatic] forState:UIControlStateNormal];
+    }];
+    [photoViewController text2:^(NSNumber *num){
+        self -> _num = num;
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(160, 1, 15, 15)];
+        label.backgroundColor = [UIColor redColor];
+        label.textColor = [UIColor whiteColor];
+        label.text = [NSString stringWithFormat:@"%@", self.num];
+
+
+        [self->_btn09 addSubview:label];
+    }];
     [self.navigationController pushViewController:photoViewController animated:YES];
     
     
@@ -370,6 +375,9 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+
 
 /*
 #pragma mark - Navigation
